@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  db:
+    image: 'postgres:13.1-alpine'
+    container_name: postgres-container
+    environment:
+      - POSTGRES_USER=maxxrl
+      - POSTGRES_PASSWORD=maxxrl
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
